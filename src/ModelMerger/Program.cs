@@ -193,7 +193,7 @@ namespace ModelMerger
             Printer.WriteLine("INIT", "---------------------------");
             Printer.WriteLine("INIT", "ModelMerger by Scobalula");
             Printer.WriteLine("INIT", "Merges SEModels into 1");
-            Printer.WriteLine("INIT", "Version 1.0.0.0");
+            Printer.WriteLine("INIT", string.Format("Version {0}", Assembly.GetExecutingAssembly().GetName().Version));
             Printer.WriteLine("INIT", "---------------------------");
 
             try
