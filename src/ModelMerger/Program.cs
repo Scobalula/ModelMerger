@@ -214,9 +214,11 @@ namespace ModelMerger
                     Printer.WriteLine("MERGER", string.Format("Using {0} as root model", rootModel.Name));
 
                     var merged = new List<Model>(models.Count)
-                {
-                    rootModel
-                };
+                    {
+                        rootModel
+                    };
+
+                    var outputFolder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Merged Models");
 
                     // Keep looping until we've resolved all models
                     // We do this because some models connect to other
@@ -320,7 +322,8 @@ namespace ModelMerger
                     }
 
                     Printer.WriteLine("MERGER", string.Format("Saving {0}", rootModel.Name));
-                    rootModel.Save(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Merged Models", rootModel.Name + ".semodel"));
+                    Directory.CreateDirectory(outputFolder);
+                    rootModel.Save(Path.Combine(outputFolder, rootModel.Name + ".semodel"));
                     Printer.WriteLine("MERGER", string.Format("Saved {0}", rootModel.Name));
                 }
             }
