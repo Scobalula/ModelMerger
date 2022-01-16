@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29926.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelMerger", "ModelMerger.csproj", "{0AC36128-5FCA-4D89-A1AE-9614412CD3FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SELib", "..\SELibDotNet\src\SELib\SELib.csproj", "{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhilLibX", "..\PhilLibX\PhilLibX.csproj", "{0F468D5B-2F30-42F5-9043-920040D83D9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,30 @@ Global
 		{0AC36128-5FCA-4D89-A1AE-9614412CD3FA}.Release|x64.Build.0 = Release|Any CPU
 		{0AC36128-5FCA-4D89-A1AE-9614412CD3FA}.Release|x86.ActiveCfg = Release|Any CPU
 		{0AC36128-5FCA-4D89-A1AE-9614412CD3FA}.Release|x86.Build.0 = Release|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Debug|x64.Build.0 = Debug|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Debug|x86.Build.0 = Debug|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Release|x64.ActiveCfg = Release|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Release|x64.Build.0 = Release|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Release|x86.ActiveCfg = Release|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Release|x86.Build.0 = Release|Any CPU
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Debug|x64.ActiveCfg = Debug|x64
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Debug|x64.Build.0 = Debug|x64
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Debug|x86.ActiveCfg = Debug|x86
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Debug|x86.Build.0 = Debug|x86
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Release|x64.ActiveCfg = Release|x64
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Release|x64.Build.0 = Release|x64
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Release|x86.ActiveCfg = Release|x86
+		{0F468D5B-2F30-42F5-9043-920040D83D9D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

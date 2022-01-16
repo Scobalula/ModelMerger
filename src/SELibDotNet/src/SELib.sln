@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SELib", "SELib\SELib.csproj", "{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{8448FA3E-0753-46BD-B6E3-B4F803C093B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugUtil", "DebugUtil\DebugUtil.csproj", "{ADDB9CB2-A643-49F4-AEF7-F534BACF5B8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03DA150-718D-4EA9-AFCA-D3E17A7DF3E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8448FA3E-0753-46BD-B6E3-B4F803C093B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8448FA3E-0753-46BD-B6E3-B4F803C093B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8448FA3E-0753-46BD-B6E3-B4F803C093B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8448FA3E-0753-46BD-B6E3-B4F803C093B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADDB9CB2-A643-49F4-AEF7-F534BACF5B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDB9CB2-A643-49F4-AEF7-F534BACF5B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDB9CB2-A643-49F4-AEF7-F534BACF5B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDB9CB2-A643-49F4-AEF7-F534BACF5B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

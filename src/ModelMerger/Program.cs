@@ -44,8 +44,13 @@ namespace ModelMerger
 
             Printer.WriteLine("LOADER", string.Format("Loading {0}", model.Name));
 
-            foreach (var bone in input.Bones)
+            foreach (var shape in input.Shapes)
             {
+                model.Shapes.Add(shape);
+            }
+
+            foreach (var bone in input.Bones)
+            { 
                 model.Bones.Add(new Model.Bone(
                     bone.BoneName,
                     bone.BoneParent,
@@ -86,11 +91,15 @@ namespace ModelMerger
                         vertex.UVs.Add(new Vector2((float)uv.X, (float)uv.Y));
 
                     foreach (var weight in severtex.Weights)
-                        vertex.Weights.Add(new Model.Vertex.Weight()
-                        {
-                            BoneIndex = (int)weight.BoneIndex,
-                            Influence = weight.BoneWeight
-                        });
+                        vertex.Weights.Add(new Model.Vertex.Weight((int)weight.BoneIndex, weight.BoneWeight));
+
+                    foreach (var shape in severtex.Shapes)
+                        vertex.Shapes.Add(new Model.Vertex.Shape(
+                            (int)shape.ShapeIndex,
+                            new Vector3(
+                                (float)shape.Delta.X,
+                                (float)shape.Delta.Y,
+                                (float)shape.Delta.Z)));
 
                     vertex.Color = new Vector4(
                         severtex.VertexColor.R / 255.0f,
@@ -254,6 +263,14 @@ namespace ModelMerger
                                 }
                             }
 
+                            foreach (var shape in model.Shapes)
+                            {
+                                if(!rootModel.Shapes.Contains(shape))
+                                {
+                                    rootModel.Shapes.Add(shape);
+                                }
+                            }
+
                             // Compute global positions (we need them for offsetting)
                             rootModel.GenerateGlobalBoneData();
                             model.GenerateGlobalBoneData();
@@ -299,11 +316,14 @@ namespace ModelMerger
 
                                     foreach (var weight in vertex.Weights)
                                     {
-                                        nVertex.Weights.Add(new Model.Vertex.Weight()
-                                        {
-                                            Influence = weight.Influence,
-                                            BoneIndex = rootModel.Bones.FindIndex(x => x.Name == model.Bones[weight.BoneIndex].Name),
-                                        });
+                                        nVertex.Weights.Add(new Model.Vertex.Weight(rootModel.Bones.FindIndex(x => x.Name == model.Bones[weight.BoneIndex].Name), weight.Influence));
+                                    }
+
+                                    foreach (var shape in vertex.Shapes)
+                                    {
+                                        nVertex.Shapes.Add(new Model.Vertex.Shape(
+                                            rootModel.Shapes.FindIndex(x => x == model.Shapes[shape.ShapeIndex]),
+                                            shape.Delta));
                                     }
 
                                     // Now move it to the new position
