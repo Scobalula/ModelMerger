@@ -323,7 +323,7 @@ namespace ModelMerger
                                     {
                                         nVertex.Shapes.Add(new Model.Vertex.Shape(
                                             rootModel.Shapes.FindIndex(x => x == model.Shapes[shape.ShapeIndex]),
-                                            shape.Delta));
+                                            rotation.TransformVector(shape.Delta)));
                                     }
 
                                     // Now move it to the new position
